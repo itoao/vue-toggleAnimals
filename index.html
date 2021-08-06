@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="app">
+        <div>
+            <img v-bind:src ="imagePath" >
+        </div>
+        <div>
+            <button @click="clickDevilButton">タスマニアデビル</button>
+            <button @click="clickGnuButton">ヌー</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                imagePath: ''
+            },
+            methods: {
+                clickDevilButton: function(){
+                    this.imagePath = 'https://www.ezorisuyado.com/wp/wp-content/uploads/2020/01/PC031861-520x390.jpg';
+                },
+                clickGnuButton: function(){
+                    this.imagePath = 'https://stat.ameba.jp/user_images/20191013/15/uranai9494/62/1f/g/o1157077414613514417.gif?caw=800';
+                },
+            }
+        })
+    </script>
+</body>
+</html>
